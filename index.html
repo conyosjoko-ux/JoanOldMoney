@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar Bahasa Inggris</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      margin: 15px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>📘 Belajar Bahasa Inggris</h1>
+  <p>Klik tombol untuk mendengar pengucapan</p>
+
+  <div class="card">
+    <h2>Apple</h2>
+    <p>Artinya: Apel</p>
+    <button onclick="speak('Apple')">🔊 Play</button>
+  </div>
+
+  <div class="card">
+    <h2>Book</h2>
+    <p>Artinya: Buku</p>
+    <button onclick="speak('Book')">🔊 Play</button>
+  </div>
+
+  <div class="card">
+    <h2>Good Morning</h2>
+    <p>Artinya: Selamat Pagi</p>
+    <button onclick="speak('Good Morning')">🔊 Play</button>
+  </div>
+
+  <script>
+    function speak(text) {
+      const msg = new SpeechSynthesisUtterance(text);
+      msg.lang = "en-US"; // atur bahasa ke English
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+</body>
+</html>
